@@ -6,13 +6,16 @@ Pre ziskanie IBAN staci vediet kod banky a cislo uctu, prip. predcislie uctu.
 Pouzitie triedy je primitivne
 
 ```php
+<?php
 require_once ("/path/to/iban-convertor/IbanConvertor.php");
+
 $bankCode = "0200";
 $accountNumber = "1234567890";
 //predcislie uctu - napr v mBank 520600, vacsinou prazdne
 $accountSuffix = "520600";
+
 $convertor = new IbanConvertor();
-$iban = $convertor->convert($bankCode, $accountNumber, $accountSuffix)
+$iban = $convertor->convert($bankCode, $accountNumber, $accountSuffix);
 ```
 
 ###INSTALACIA
